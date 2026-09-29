@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GULA FoodTruck | Sin on Wheels</title>
+  
+  <link rel="stylesheet" href="../styles/foodtruck.css" />
+  <script defer src="../scripts/foodtruck.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+ 
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">
+      <a href="index.html">
+        <img src="../Imagenes/logo.png" alt="Logo Gula" class="logo-img" />
+      </a>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="foodtruck.html" class="active">FoodTruck</a>
+      <a href="restaurantes.html">Restaurants</a>
+    </nav>
+    <div class="header-right">
+      <i class="fas fa-search search-icon" id="search-toggle"></i>
+      <i class="fas fa-shopping-cart cart-icon" onclick="location.href='carrito.html'"><span class="cart-count">0</span></i>
+      <button class="sign-in-btn" onclick="location.href='acceso.html'">SIGN IN</button>
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+  
+  <!-- SEARCH OVERLAY -->
+  <div class="search-overlay">
+    <div class="search-box">
+      <input type="text" placeholder="Which sin are you looking for?" class="search-input-overlay">
+      <button class="search-btn-overlay"><i class="fas fa-search"></i></button>
+    </div>
+    <i class="fas fa-times close-search"></i>
+  </div>
+
+  <!-- HERO BANNER -->
+  <section class="hero-banner">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>GULA <span class="highlight">FOODTRUCK</span></h1>
+      <p>SIN ON WHEELS</p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main class="contenido">
+
+    <!-- SECTION 1: FoodTruck Image + Text -->
+    <section class="foodtruck-showcase">
+      <div class="showcase-img">
+        <img src="../imagenes/foodtruck.webp" alt="FoodTruck GULA" />
+      </div>
+      <div class="showcase-text">
+        <div class="section-heading">
+          <div class="flame-icon"><i class="fas fa-fire"></i></div>
+          <h2>TEMPTATION IS ON THE STREETS</h2>
+        </div>
+        <h3 class="showcase-subheading">GULA'S BEASTS ARE UNLEASHED</h3>
+        <p>Our GULA FoodTrucks are machines powered by hell, made to ignite grills and awaken forbidden cravings. No seats, no mercy — just pure sin in a bun.</p>
+        <p><strong>TWO DEMONIC TRUCKS</strong> roam the country ready to appear where hunger burns strongest. When desire is on wheels... will you resist or surrender?</p>
+        <div class="cta-container">
+          <button class="cta-button" onclick="location.href='#paradas-foodtruck'">FIND THE TRUCK <i class="fas fa-map-marker-alt"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Additional Text + Illustration -->
+    <section class="foodtruck-info">
+      <div class="foodtruck-text">
+        <h3 class="info-heading">IRRESISTIBLE MOBILE TEMPTATION</h3>
+        <p>The GULA FoodTruck travels through festivals, street markets and wild events bringing sin to the grill wherever it goes. Our griddles don't cool down, and neither does your craving.</p>
+        <p>It doesn't need seats — just fire, meat and hungry souls. With smoke and seduction, we're already heating up the roads for 2025.</p>
+        <p><strong>TWO MOBILE TEMPTATION UNITS</strong> ready to appear where burgers are needed most.</p>
+      </div>
+      <div class="foodtruck-img-bottom">
+        <img src="../imagenes/ventafoodtruck.png" alt="GULA Illustration" />
+      </div>
+    </section>
+
+    <!-- UPCOMING STOPS (IMPROVED CAROUSEL) -->
+    <section class="upcoming-stops">
+      <div class="section-heading centered">
+        <div class="flame-icon"><i class="fas fa-fire"></i></div>
+        <h2>UPCOMING STOPS</h2>
+      </div>
+      <div class="carousel-container">
+        <div class="carousel-track" id="paradas-foodtruck">
+          <!-- JS will fill this container -->
+        </div>
+        <div class="carousel-controls">
+          <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+          <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW: Book the foodtruck -->
+    <section class="book-foodtruck">
+      <div class="book-overlay"></div>
+      <div class="book-content">
+        <h2>WANT THE SIN TRUCK AT YOUR EVENT?</h2>
+        <p>Book our FoodTruck for private events, festivals or celebrations.</p>
+        <button class="book-btn" onclick="location.href='reservar.html'">BOOK NOW</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-col">
+        <h4>GULA</h4>
+        <p>Burgers that awaken sins since 2022.</p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/gulabvrgers/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>EXPLORE</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="foodtruck.html">FoodTruck</a></li>
+          <li><a href="restaurantes.html">Restaurants</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>CONTACT</h4>
+        <ul>
+          <li><i class="fas fa-envelope"></i> info@gula.com</li>
+          <li><i class="fas fa-phone"></i> +34 666 666 666</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>NEWSLETTER</h4>
+        <p>Receive sinful offers</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Your email">
+          <button type="submit"><i class="fas fa-paper-plane"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>🔥 Flavor that ignites your sins. Made with passion by <strong>GULA</strong> 🍔</p>
+      <p class="copyright">© 2025 GULA. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- FLOATING EMBERS -->
+  <div class="floating-embers">
+    <div class="floating-ember floating-ember1"></div>
+    <div class="floating-ember floating-ember2"></div>
+    <div class="floating-ember floating-ember3"></div>
+    <div class="floating-ember floating-ember4"></div>
+    <div class="floating-ember floating-ember5"></div>
+    <div class="floating-ember floating-ember6"></div>
+    <div class="floating-ember floating-ember7"></div>
+  </div>
+
+</body>
+</html>

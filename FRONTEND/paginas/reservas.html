@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GULA | Reserve Your Table</title>
+  
+  <link rel="stylesheet" href="../styles/hamburguesas.css" />
+  <link rel="stylesheet" href="../styles/reserva.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="../imagenes/logo.png" alt="Gula Logo" class="logo-img" />
+      </a>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="foodtruck.html">FoodTruck</a>
+      <a href="restaurantes.html">Restaurants</a>
+    </nav>
+    <div class="header-right">
+      <i class="fas fa-search search-icon" id="search-toggle"></i>
+      <i class="fas fa-shopping-cart cart-icon"><span class="cart-count">0</span></i>
+      <button class="sign-in-btn" onclick="location.href='acceso.html'">Sign in</button>
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <div class="hero-section reserva-hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="sin-symbol">
+        <i class="fas fa-utensils"></i>
+      </div>
+      <h1>RESERVE YOUR <span class="glitch-text">SIN</span></h1>
+      <div class="divider">
+        <span></span>
+        <i class="fas fa-calendar-alt"></i>
+        <span></span>
+      </div>
+      <p>Secure your place in our temple of temptations</p>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main class="reserva-container">
+    <div class="reserva-form-container">
+      <h2 class="reserva-title">Make Your Reservation</h2>
+      
+      <div class="reserva-steps">
+        <div class="step active">
+          <div class="step-number">1</div>
+          <span>Information</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <span>Date & Time</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <span>Confirmation</span>
+        </div>
+      </div>
+      
+      <form id="reservation-form" class="reserva-form">
+        <!-- Step 1: Personal information -->
+        <div class="form-step active" id="step-1">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" required placeholder="Enter your name">
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" required placeholder="your@email.com">
+          </div>
+          
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" required placeholder="666 777 888">
+          </div>
+          
+          <div class="form-group">
+            <label for="guests">Number of Guests</label>
+            <div class="cantidad-selector">
+              <button type="button" class="cantidad-btn" id="decrease-guests">-</button>
+              <input type="number" id="guests" min="1" max="10" value="2" readonly>
+              <button type="button" class="cantidad-btn" id="increase-guests">+</button>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="location">Location</label>
+            <select id="location" required>
+              <option value="" disabled selected>Select a location</option>
+              <option value="centro">GULA Downtown</option>
+              <option value="norte">GULA North</option>
+              <option value="sur">GULA South</option>
+            </select>
+          </div>
+          
+          <div class="form-actions">
+            <button type="button" class="btn-next" data-next="step-2">Continue</button>
+          </div>
+        </div>
+        
+        <!-- Step 2: Date and Time -->
+        <div class="form-step" id="step-2">
+          <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" id="date" required>
+          </div>
+          
+          <div class="form-group">
+            <label>Time</label>
+            <div class="horas-grid" id="available-times">
+              <!-- Times loaded dynamically -->
+            </div>
+            <input type="hidden" id="time" name="time" required>
+          </div>
+          
+          <div class="form-actions">
+            <button type="button" class="btn-prev" data-prev="step-1">Back</button>
+            <button type="button" class="btn-next" data-next="step-3">Continue</button>
+          </div>
+        </div>
+        
+        <!-- Step 3: Confirmation -->
+        <div class="form-step" id="step-3">
+          <h3>Reservation Summary</h3>
+          
+          <div class="resumen-reserva">
+            <div class="resumen-item">
+              <span class="resumen-label">Name:</span>
+              <span class="resumen-valor" id="summary-name"></span>
+            </div>
+            
+            <div class="resumen-item">
+              <span class="resumen-label">Email:</span>
+              <span class="resumen-valor" id="summary-email"></span>
+            </div>
+            
+            <div class="resumen-item">
+              <span class="resumen-label">Phone:</span>
+              <span class="resumen-valor" id="summary-phone"></span>
+            </div>
+            
+            <div class="resumen-item">
+              <span class="resumen-label">Guests:</span>
+              <span class="resumen-valor" id="summary-guests"></span>
+            </div>
+            
+            <div class="resumen-item">
+              <span class="resumen-label">Location:</span>
+              <span class="resumen-valor" id="summary-location"></span>
+            </div>
+            
+            <div class="resumen-item">
+              <span class="resumen-label">Date:</span>
+              <span class="resumen-valor" id="summary-date"></span>
+            </div>
+            
+            <div class="resumen-item">
+              <span class="resumen-label">Time:</span>
+              <span class="resumen-valor" id="summary-time"></span>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="comments">Additional Comments</label>
+            <textarea id="comments" rows="3" placeholder="Please mention any special requests (allergies, preferences, etc.)"></textarea>
+          </div>
+          
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="terms" required>
+            <label for="terms">I accept the terms and conditions</label>
+          </div>
+          
+          <div class="form-actions">
+            <button type="button" class="btn-prev" data-prev="step-2">Back</button>
+            <button type="submit" class="btn-submit">Confirm Reservation</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    
+    <div class="reserva-info">
+      <div class="info-card">
+        <div class="info-icon"><i class="fas fa-clock"></i></div>
+        <h3>Hours</h3>
+        <p>Monday to Thursday: 1:00 PM - 11:30 PM</p>
+        <p>Friday and Saturday: 1:00 PM - 1:30 AM</p>
+        <p>Sunday: 1:00 PM - 11:00 PM</p>
+      </div>
+      
+      <div class="info-card">
+        <div class="info-icon"><i class="fas fa-credit-card"></i></div>
+        <h3>Cancellation Policy</h3>
+        <p>You can cancel your reservation up to 2 hours before without charge.</p>
+        <p>Later cancellations or no-shows may incur a fee.</p>
+      </div>
+      
+      <div class="info-card">
+        <div class="info-icon"><i class="fas fa-utensils"></i></div>
+        <h3>Special Menus</h3>
+        <p>Please mention in the comments if you need vegetarian, vegan menus or have food allergies.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- NOTIFICATION -->
+  <div class="notification" id="notification">
+    <i class="notification-icon fas fa-check-circle"></i>
+    <span class="notification-message">Reservation confirmed successfully</span>
+  </div>
+  
+  <!-- FLOATING EMBERS -->
+  <div class="floating-embers">
+    <div class="floating-ember floating-ember1"></div>
+    <div class="floating-ember floating-ember2"></div>
+    <div class="floating-ember floating-ember3"></div>
+    <div class="floating-ember floating-ember4"></div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer-gula">
+    <div class="footer-top">
+      <div class="footer-col">
+        <h4>GULA</h4>
+        <p>Burgers that awaken sins since 2022.</p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/gulabvrgers/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>EXPLORE</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="foodtruck.html">FoodTruck</a></li>
+          <li><a href="restaurantes.html">Restaurants</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>CONTACT</h4>
+        <ul>
+          <li><i class="fas fa-envelope"></i> info@gula.es</li>
+          <li><i class="fas fa-phone"></i> +34 666 666 666</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>NEWSLETTER</h4>
+        <p>Receive sinful offers</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Your email">
+          <button type="submit"><i class="fas fa-paper-plane"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>🔥 Flavor that ignites your sins. Made with passion by <strong>GULA</strong> 🍔</p>
+      <p class="copyright">© 2025 GULA. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../scripts/reserva.js"></script>
+</body>
+</html>

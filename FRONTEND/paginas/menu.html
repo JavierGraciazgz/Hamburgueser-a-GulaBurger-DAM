@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GULA | The 7 Deadly Sins of Flavor</title>
+   <link rel="stylesheet" href="../styles/menu.css" />
+  <script defer src="../scripts/menu.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">
+      <a href="index.html">
+        <img src="../imagenes/logo.png" alt="Logo Gula" class="logo-img" />
+      </a>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="menu.html" class="active">Menu</a>
+      <a href="foodtruck.html">FoodTruck</a>
+      <a href="restaurantes.html">Restaurants</a>
+    </nav>
+    <div class="header-right">
+      <i class="fas fa-search search-icon" id="search-toggle"></i>
+      <i class="fas fa-shopping-cart cart-icon" onclick="location.href='carrito.html'"><span class="cart-count">0</span></i>
+      <button class="sign-in-btn" onclick="location.href='acceso.html'">SIGN IN</button>
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+  
+  <!-- SEARCH OVERLAY -->
+  <div class="search-overlay">
+    <div class="search-box">
+      <input type="text" placeholder="Which sin are you looking for?" class="search-input-overlay">
+      <button class="search-btn-overlay"><i class="fas fa-search"></i></button>
+    </div>
+    <i class="fas fa-times close-search"></i>
+  </div>
+
+  <!-- HERO BANNER -->
+  <section class="menu-hero">
+    <div class="flame-container">
+      <div class="flame flame1"></div>
+      <div class="flame flame2"></div>
+      <div class="flame flame3"></div>
+      <div class="flame flame4"></div>
+      <div class="flame flame5"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="sin-symbol">
+        <i class="fas fa-fire"></i>
+      </div>
+      <h1>THE 7 <span class="glitch-text" data-text="DEADLY">DEADLY</span> SINS</h1>
+      <p class="hero-subtitle">FLAVORS TO FALL INTO TEMPTATION</p>
+      <div class="hero-divider">
+        <span></span>
+        <i class="fas fa-utensils"></i>
+        <span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECIAL OFFER BANNER -->
+  <div class="special-offer">
+    <div class="special-offer-content">
+      <div class="special-tag pulse-element">SPECIAL OFFER</div>
+      <h3>THE HELL COMBO</h3>
+      <p>Any burger + fries + drink for only <span class="price-tag">16.66€</span></p>
+      <a href="#" class="special-btn">VIEW COMBO <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    <!-- INTRO SECTION -->
+    <section class="menu-intro">
+      <div class="section-header">
+        <div class="section-icon"><i class="fas fa-fire"></i></div>
+        <h2>OUR DIABOLICAL MENU</h2>
+      </div>
+      <p>Select your category and let yourself be carried away by sin</p>
+    </section>
+
+    <!-- MENU CATEGORIES -->
+    <section class="categories-section">
+      <div class="categories-grid">
+        <!-- Burgers -->
+        <div class="category-card" data-category="hamburguesas">
+          <div class="category-content">
+            <div class="category-icon">
+              <i class="fas fa-hamburger"></i>
+            </div>
+            <h3 class="neon-text">BURGERS</h3>
+            <p>Our selection of sins between buns</p>
+            <div class="highlight-tag">Best Seller</div>
+            <a href="hamburguesas.html" class="card-btn">EXPLORE <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="category-img">
+            <img src="../imagenes/cartahamburguesas.png" alt="Burgers">
+            <div class="overlay-effect"></div>
+          </div>
+        </div>
+
+        <!-- Sides -->
+        <div class="category-card" data-category="acompanantes">
+          <div class="category-content">
+            <div class="category-icon alt-color">
+              <i class="fas fa-french-fries"></i>
+            </div>
+            <h3 class="neon-text-alt">SIDES</h3>
+            <p>The perfect complement to your temptation</p>
+            <a href="acompañantes.html" class="card-btn alt-btn">EXPLORE <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="category-img">
+            <img src="../imagenes/cartadeentrantes.png" alt="Sides">
+            <div class="overlay-effect"></div>
+          </div>
+        </div>
+
+        <!-- Drinks -->
+        <div class="category-card" data-category="bebidas">
+          <div class="category-content">
+            <div class="category-icon">
+              <i class="fas fa-glass-cheers"></i>
+            </div>
+            <h3 class="neon-text">DRINKS</h3>
+            <p>Extinguish the fire of temptation</p>
+            <a href="bebidas.html" class="card-btn">EXPLORE <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="category-img">
+            <img src="../imagenes/cartabebidas.png" alt="Drinks">
+            <div class="overlay-effect"></div>
+          </div>
+        </div>
+
+        <!-- Desserts -->
+        <div class="category-card" data-category="postres">
+          <div class="category-content">
+            <div class="category-icon alt-color">
+              <i class="fas fa-ice-cream"></i>
+            </div>
+            <h3 class="neon-text-alt">DESSERTS</h3>
+            <p>The sweet sin to end your experience</p>
+            <div class="highlight-tag">New</div>
+            <a href="postres.html" class="card-btn alt-btn">EXPLORE <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="category-img">
+            <img src="../imagenes/cartadepostres.png" alt="Desserts">
+            <div class="overlay-effect"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED SINS SECTION -->
+    <section class="featured-section">
+      <div class="section-header">
+        <div class="section-icon"><i class="fas fa-fire"></i></div>
+        <h2>FEATURED PRODUCTS</h2>
+        <div class="section-subtitle"></div>
+      </div>
+
+      <!-- CAROUSEL OF SINS -->
+      <div class="sins-carousel-container">
+        <div class="swiper-container sins-carousel">
+          <div class="swiper-wrapper">
+            <!-- Burger 1 - The Gluttony -->
+            <div class="swiper-slide">
+              <div class="sin-card" data-sin="gula">
+                <div class="sin-badge">BESTSELLER</div>
+                <div class="sin-img-container">
+                  <img src="../Imagenes/gula.png" alt="The Gluttony">
+                  <div class="sin-overlay"></div>
+                  <div class="sin-number">1</div>
+                </div>
+                <div class="sin-content">
+                  <h3 class="sin-title">THE GLUTTONY</h3>
+                  <div class="sin-description">
+                    <p>Double smash burger, melted smoked cheese, double crispy bacon and our special sinful sauce</p>
+                  </div>
+                  <div class="sin-footer">
+                    <div class="sin-price">13.95€</div>
+                    <button class="add-to-cart-btn"><i class="fas fa-plus"></i></button>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+
+            <!-- Burger 2 - The Lust -->
+            <div class="swiper-slide">
+              <div class="sin-card" data-sin="lujuria">
+                <div class="sin-badge">TEMPTING</div>
+                <div class="sin-img-container">
+                  <img src="../imagenes/lujuria.png" alt="The Lust">
+                  <div class="sin-overlay"></div>
+                  <div class="sin-number">2</div>
+                </div>
+                <div class="sin-content">
+                  <h3 class="sin-title">THE LUST</h3>
+                  <div class="sin-description">
+                    <p>Aged beef, melted brie cheese, caramelized onions and homemade bacon jam</p>
+                  </div>
+                  <div class="sin-footer">
+                    <div class="sin-price">14.95€</div>
+                    <button class="add-to-cart-btn"><i class="fas fa-plus"></i></button>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+
+            <!-- Cheesecake - The Wrath -->
+            <div class="swiper-slide">
+              <div class="sin-card" data-sin="ira">
+                <div class="sin-badge">SPICY</div>
+                <div class="sin-img-container">
+                  <img src="../Imagenes/tartadequeso.png" alt="The Wrath">
+                  <div class="sin-overlay"></div>
+                  <div class="sin-number">3</div>
+                </div>
+                <div class="sin-content">
+                  <h3 class="sin-title">THE WRATH</h3>
+                  <div class="sin-description">
+                    <p>Beef patty, fresh chopped jalapeños, homemade hot sauce, pepper jack cheese and guacamole</p>
+                  </div>
+                  <div class="sin-footer">
+                    <div class="sin-price">13.50€</div>
+                    <button class="add-to-cart-btn"><i class="fas fa-plus"></i></button>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+
+            <!-- Chocolate Milkshake - The Sloth -->
+            <div class="swiper-slide">
+              <div class="sin-card" data-sin="pereza">
+                <div class="sin-badge">CLASSIC</div>
+                <div class="sin-img-container">
+                  <img src="../Imagenes/batidochocolate.png" alt="The Sloth">
+                  <div class="sin-overlay"></div>
+                  <div class="sin-number">5</div>
+                </div>
+                <div class="sin-content">
+                  <h3 class="sin-title">THE SLOTH</h3>
+                  <div class="sin-description">
+                    <p>For those who don't want to complicate: beef, cheddar cheese, lettuce, tomato and homemade sauce</p>
+                  </div>
+                  <div class="sin-footer">
+                    <div class="sin-price">12.50€</div>
+                    <button class="add-to-cart-btn"><i class="fas fa-plus"></i></button>
+                  </div>
+                 
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Nachos - The Pride -->
+            <div class="swiper-slide">
+              <div class="sin-card" data-sin="soberbia">
+                <div class="sin-badge">PREMIUM</div>
+                <div class="sin-img-container">
+                  <img src="../Imagenes/nachos.png" alt="The Pride">
+                  <div class="sin-overlay"></div>
+                  <div class="sin-number">4</div>
+                </div>
+                <div class="sin-content">
+                  <h3 class="sin-title">THE PRIDE</h3>
+                  <div class="sin-description">
+                    <p>Premium Black Angus beef, foie gras medallion, black truffle slices and Pedro Ximénez reduction</p>
+                  </div>
+                  <div class="sin-footer">
+                    <div class="sin-price">18.95€</div>
+                    <button class="add-to-cart-btn"><i class="fas fa-plus"></i></button>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+
+         
+            <!-- Chicken Fingers - The Envy -->
+            <div class="swiper-slide">
+              <div class="sin-card" data-sin="envidia">
+                <div class="sin-badge">VEGAN</div>
+                <div class="sin-img-container">
+                  <img src="../Imagenes/fingers.png" alt="The Envy">
+                  <div class="sin-overlay"></div>
+                  <div class="sin-number">6</div>
+                </div>
+                <div class="sin-content">
+                  <h3 class="sin-title">THE ENVY</h3>
+                  <div class="sin-description">
+                    <p>Beyond meat, vegan cheese, sautéed mushrooms, avocado and special yogurt sauce</p>
+                  </div>
+                  <div class="sin-footer">
+                    <div class="sin-price">15.95€</div>
+                    <button class="add-to-cart-btn"><i class="fas fa-plus"></i></button>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+
+            <!-- Beer - The Greed -->
+            <div class="swiper-slide">
+              <div class="sin-card" data-sin="avaricia">
+                <div class="sin-badge">TRIPLE</div>
+                <div class="sin-img-container">
+                  <img src="../Imagenes/cerveza.png" alt="The Greed">
+                  <div class="sin-overlay"></div>
+                  <div class="sin-number">7</div>
+                </div>
+                <div class="sin-content">
+                  <h3 class="sin-title">THE GREED</h3>
+                  <div class="sin-description">
+                    <p>Triple patty, triple cheese, double bacon, fried egg, onion ring and BBQ sauce</p>
+                  </div>
+                  <div class="sin-footer">
+                    <div class="sin-price">19.95€</div>
+                    <button class="add-to-cart-btn"><i class="fas fa-plus"></i></button>
+                  </div>
+                  
+                    
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Custom Navigation -->
+          <div class="swiper-button-next sins-button-next">
+            <div class="neon-arrow">
+              <i class="fas fa-chevron-right"></i>
+            </div>
+          </div>
+          <div class="swiper-button-prev sins-button-prev">
+            <div class="neon-arrow">
+              <i class="fas fa-chevron-left"></i>
+            </div>
+          </div>
+          
+          <!-- Custom Pagination -->
+          <div class="swiper-pagination sins-pagination"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <div class="newsletter-content">
+      <h3 class="newsletter-title">JOIN THE DARK SIDE</h3>
+      <p>Subscribe to receive exclusive offers and be the first to know about our new creations</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Your email" required>
+        <button type="submit" class="pulse-element">SUBSCRIBE</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-gula">
+    <div class="footer-top">
+      <div class="footer-col">
+        <h4>GULA</h4>
+        <p>Burgers that awaken sins since 2022.</p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/gulabvrgers/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>EXPLORE</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="foodtruck.html">FoodTruck</a></li>
+          <li><a href="restaurantes.html">Restaurants</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>CONTACT</h4>
+        <ul>
+          <li><i class="fas fa-envelope"></i> info@gula.com</li>
+          <li><i class="fas fa-phone"></i> +34 666 666 666</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>NEWSLETTER</h4>
+        <p>Receive sinful offers</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Your email">
+          <button type="submit"><i class="fas fa-paper-plane"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>🔥 Flavor that ignites your sins. Made with passion by <strong>GULA</strong> 🍔</p>
+      <p class="copyright">© 2025 GULA. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- NOTIFICATION COMPONENT -->
+  <div class="notification" id="notification">
+    <i class="notification-icon fas fa-check-circle"></i>
+    <span class="notification-message">Product added to cart</span>
+  </div>
+
+  <!-- FLOATING EMBERS -->
+  <div class="floating-embers">
+    <div class="floating-ember floating-ember1"></div>
+    <div class="floating-ember floating-ember2"></div>
+    <div class="floating-ember floating-ember3"></div>
+    <div class="floating-ember floating-ember4"></div>
+    <div class="floating-ember floating-ember5"></div>
+    <div class="floating-ember floating-ember6"></div>
+    <div class="floating-ember floating-ember7"></div>
+  </div>
+
+  <!-- CART DROPDOWN -->
+  <div id="carrito-desplegable">
+    <div class="carrito-header">
+      <h4>YOUR ORDER</h4>
+      <button class="carrito-close"><i class="fas fa-times"></i></button>
+    </div>
+    <ul id="lista-carrito">
+      <li class="carrito-empty">Your cart is empty</li>
+    </ul>
+    <div class="carrito-total">
+      <span class="carrito-total-label">Total:</span>
+      <span class="carrito-total-precio"><span id="carrito-total">0.00</span> €</span>
+    </div>
+    <div class="carrito-botones">
+      <a href="#" class="btn-vaciar">Clear</a>
+      <a href="checkout.html" class="btn-checkout">Checkout</a>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="scripts/menu.js"></script>
+</body>
+</html>
